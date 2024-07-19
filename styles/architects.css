@@ -68,6 +68,7 @@ main > section{
 .navbar{
     justify-content: space-between;
     align-items: center;
+    padding: 0 30px;
 }
 
 .brand{
@@ -169,6 +170,22 @@ main > section{
     margin-top: 10px;
 }
 
+/* our sponsors section style */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+
 
 
 /* responsive media query small size device*/
@@ -180,17 +197,30 @@ main > section{
     }
 
     .team-img-container, 
-    .facts-container {
+    .facts-container,
+    .sponsor-companies {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .facts-container {
+        justify-items: center;
+        gap: 24px;
+        /* eta o dise tai but fact card er margin ta better kaj kore i think */
+    }
     .fact-card {
         margin: 10px auto;
+        /* eta ami disi o deynai */
     }
 
     .our-features {
         margin: 0 22px 0 22px;
-    }   
+    }  
+
+    .sponsor-companies {
+        justify-items: center;
+        gap: 50px;
+    }
+
 }
 
 
@@ -202,4 +232,26 @@ main > section{
     .our-features{
         margin: 25px  auto;
     }
+
+    /* .facts-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        
+    } */
+    .sponsor-companies, .facts-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;   
+    }
+
+    .some-facts > h3 {
+        text-align: center;
+    }
+    .some-facts > p {
+        margin-bottom: 65px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
 }
